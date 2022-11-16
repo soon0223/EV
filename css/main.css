@@ -1,0 +1,143 @@
+@charset 'utf-8';
+/* 메인콘텐츠 */
+
+/*메인비주얼*/
+.main_visual_wrap {height: 100vh; color: #fff;}
+.main_visual {}
+#main-section1 .main_visual li {background-position: center bottom; background-size: cover;}
+#main-section1 .v1 {background-image: url('../images/bg_main_01.jpg');}
+#main-section1 .v2 {background-image: url('../images/bg_main_02.jpg');}
+#main-section1 .v3 {background-image: url('../images/bg_main_03.jpg');}
+.main_visual ul li {display: block;}
+.v_txt {position: absolute; left: 50%; top: 45%; color: #fff;}
+.section-h2 {margin: 1.2rem 0 1rem; line-height: 1.2; transform: translate(-50%, -100px);}
+.section-h1 {margin: 0 0 1rem; line-height: 1.2; transform: translate(-50%, -100px);}
+.mv-prev {width: 13px; height: 21px; background: url('../images/sec1_arrow_prev_wh.png') no-repeat;}
+.mv-next {width: 13px; height: 21px; background: url('../images/sec1_arrow_next_wh.png') no-repeat;}
+#fp-nav ul li a span, .fp-slidesNav ul li a span {background-color: #db8328;}
+
+
+
+/*swiper*/
+:root {--swiper-theme-color: #fff;}
+
+.swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after,
+.swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after {display: none;}
+.swiper-button-prev, .main_visual_wrap.swiper-container-rtl .swiper-button-next {left: 160px; top: inherit; bottom: 386px;}
+.swiper-button-next, .main_visual_wrap.swiper-container-rtl .swiper-button-prev {left: 333px; top: inherit; bottom: 386px}
+
+.main_visual_wrap.swiper-container-horizontal>.swiper-pagination-bullets, .main_visual_wrap.swiper-pagination-custom, .main_visual_wrap.swiper-pagination-fraction {left: 200px; width: 110px; bottom: 380px;}
+.main_visual_wrap.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {margin: 0 12px;}
+.main_visual_wrap .swiper-pagination-bullet {width: 12px; height: 12px; background-color: #fff; opacity: .7; border-radius: 100%;}    
+.main_visual_wrap .swiper-pagination-bullet-active {border: 2px solid #fff; background-color:transparent;}
+
+.mv-pagination.light .swiper-pagination-bullet {background-color: #609268;}
+.mv-pagination.light .swiper-pagination-bullet-active {border: 2px solid #609268; background-color:transparent;}
+.mv-prev.light {background-image: url('../images/sec1_arrow_prev_gr.png');}
+.mv-next.light {background-image: url('../images/sec1_arrow_next_gr.png');}
+
+
+/* 전기차 소개 */
+.intro-full-wrap {position: relative; display: flex; flex-wrap: wrap; width: 100%; height: 100%;}
+.intro-img-container {position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden;}
+.intro-img-wrapper .swiper-slide {overflow: hidden;}
+.intro-img-wrapper .swiper-slide > div {width: 100%; height: 100%;}
+.intro-img-wrapper .swiper-slide > div > div {width: 50%; height: 100%; background: no-repeat 50% / cover;}
+.intro-img-wrapper .swiper-slide .intro_v1 {background-image: url('../images/sec1_img_01.jpg');}
+.intro-img-wrapper .swiper-slide .intro_v2 {background-image: url('../images/sec1_img_02.jpg');}
+.intro-img-wrapper .swiper-slide .intro_v3 {background-image: url('../images/sec1_img_03.jpg');}
+
+.intro-con-full-wrap {display: table; position: absolute; left: 50%; top: 0; width: 50%; height: 100%; padding: 220px 0 0 100px; background-color: #f9fafc;}
+.intro-con-wrap {width: 100%; height: 100%;}
+.intro-con-wrap h3 {font-size: 2em; overflow: hidden;}
+.fix_txt {height: 150px;}
+.intro-con-container {height: 200px; margin-top: 50px; overflow: inherit !important;}
+.intro-con-wrapper li {position: relative;}
+
+.chg_txt {}
+.sec2_desc > div {height: 1.6em; overflow: hidden;}
+.sec2_more {transform: translate(0px, 30px) !important;}
+.sec2_more a {display: block; width: 170px; height: 20px;}
+
+/* big page num */
+.sec2_pgn {display: flex; flex-wrap: wrap; align-items: flex-end; margin-top: 50px; font-size: 2em; color: #ddd;}
+.bignum {height: 88px; line-height: 88px;  display: flex; flex-wrap: wrap; font-size: 1.8em; overflow: hidden;}
+.sec2_pgn .bignum .num {position: relative; top: 0px; line-height: 88px;}
+.sec2_pgn .bignum span {display:block;}
+.sec2_pgn.prev_act .bignum .num {top: -176px;}
+.sec2_pgn .bignum.prev .num {top: -88px; transition: 0.5s;}
+.sec2_pgn .bignum.next .num {top: -88px; transition: 0.5s;}
+.sec2_pgn .total {z-index: 10;}
+
+
+.intro-con-container .swiper-slide .bg_img {position: absolute; top: 0px; right: 20px; width: 480px; height: 480px; background: no-repeat right bottom / contain ; opacity:0; transform:translate(10px, 10px); transition:1s 0.3s; z-index: -1;}
+.intro-con-container .swiper-slide.swiper-slide-active .bg_img {opacity:1; transform:translate(0,0);}
+.intro-con-container .intro_t1 .bg_img {background-image: url('../images/sec1_txt_bg01.png') !important;}
+.intro-con-container .intro_t2 .bg_img {background-image: url('../images/sec1_txt_bg02.png') !important;}
+.intro-con-container .intro_t3 .bg_img {background-image: url('../images/sec1_txt_bg03.png') !important;}
+
+
+
+
+/* 충전소 찿기 */
+#main-section3 {position: relative; background-color: #fff;}
+.sec3_wrap {position: absolute; width: 100%; top: 50%; transform: translateY(-45%);}
+.sec3_inbody {position: relative; max-width: 1600px; height: 600px; margin: 0 auto; box-sizing: border-box;}
+.sec3_place {position: absolute; width: 400px; height: 100%; border-top: 3px solid #333; border-bottom: 3px solid #d6d6d6;}
+.sec3_title {padding-left: 30px; margin-top: 165px;}
+.sec3_title h2 {margin-bottom: 90px;}
+.section-container {width: 100%; margin-top: 1.5rem;}
+/* .contents-box {display: none;} */
+
+.sec3-sld {position:relative; width:100%; height:100%; margin-left:540px; box-sizing:border-box;}
+.sec3-sld-core {position:relative; height:100%; z-index:1;}
+.sec3-item {float: left; position:relative; height:600px; margin:0 60px 0 0}
+.sec3-item a {display:block}
+.sec3-item a:hover, .item a:focus {box-shadow:10px 10px 15px rgba(0, 0, 0, .35);transition:all .3s ease}
+.sec3-item img {display:block; height:600px; width:400px}
+.sec3_card {position:absolute; width:100%; height:100%;  padding:90px 50px 50px;color:#fff; line-height:1.2; box-sizing:border-box;}
+.sec3_card {color: white; text-shadow: 2px 2px 4px #000000;}
+
+.slide-controls {position: absolute; left: 0; bottom: 50px; width: 400px; height: 26px;}
+
+/* #main-section3 .slick-dots {position: absolute; left: 90px; top: 11px; width: 210px; height: 3px;}
+#main-section3 .slick-dots button {float: left; display:block; width:33.3%; height: 3px; background:#cbcbcb; transition:all .3s ease; text-indent: -9999em;}
+#main-section3 .slick-dots .slick-active button {background-color: #000;} */
+
+#main-section3 .slide-controls .slick-arrow {position: absolute; width: 46px; height: 26px; text-indent: -9999em; font-size: 0; line-height: 0;}
+#main-section3 .slide-controls .slick-prev {left: 0; background-image:url('../images/sec3_arrow_prev.png');}
+#main-section3 .slide-controls .slick-next {right:0; background-image:url('../images/sec3_arrow_next.png');}
+
+.paging-info {position: absolute; left: 90px; top: 11px; width: 210px; height: 3px; background-color: #eee;}
+.progressive-bar {width: 0; height: 100%; background-color: #222; transition: 0.3s;}
+
+
+
+/* 보조금 지원 */
+#main-section4 {background: no-repeat left center / cover ; background-image: url('../images/section3_bg.jpg');}
+.sec4_wrap {position: relative; width: 96%; height: 660px;}
+.sec4_con_wrap {}
+.sec4_fix_txt {margin-top: 120px; word-spacing: -2px;}
+.sec4_fix_txt h1 {font-size: 3em; font-weight: bold; line-height: 1.1;}
+.sec4_fix_txt h3 {padding-top: 70px; font-size: 1.4em; line-height: 2;}
+.sec4_fix_txt span {line-height: 2;}
+.sec4_more {margin-top: 160px;}
+.sec4_list_wrap {position: absolute; left: 50%; top: 0;}
+.sec4_list { }
+.sec4_con {float: left; width: 250px; padding: 20px 90px 0 20px;}
+.sec4_con:nth-of-type(1),
+.sec4_con:nth-of-type(2) {padding-bottom: 130px;}
+.sec4_con:nth-of-type(3) {clear: both;}
+.sec4_con:last-child {padding-right: 0;}
+.tit_wrap {padding-top: 30px;}
+.tit_num_txt {padding-top: 5px; font-size: .85em;}
+.tit_wrap > div{ font-size: 1.8em;}
+/* .tit_num_txt , .subsidy-num {text-align: right;} */
+
+
+/* ~1535px */
+@media screen and (max-width: 1600px) {
+    .sec4_fix_txt h1 {font-size: 2.5em;}
+    .sec4_fix_txt h3 {font-size: 1.2em;}
+    .sec4_con {float: left; width: 204px; padding: 20px 45px 0 25px;}
+}

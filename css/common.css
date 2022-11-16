@@ -1,0 +1,114 @@
+@charset 'utf-8';
+@import url("webfont.css");
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
+
+/* 리셋 */
+* { margin: 0; padding: 0; box-sizing: border-box; outline-color: #0e476d;}
+header, footer, nav, section, article, aside {display: block;}
+ol, ul{ list-style-type: none;}
+body {font-family: 'paybooc-Medium', 'paybooc-Light', 'paybooc-Bold', 'paybooc-ExtraBold', 'Poppins', sans-serif; font-size: 18px; line-height: 1.6; }
+a {text-decoration: none; color: #000;}
+img {border: 0; vertical-align: top;}
+input, select, textarea { font-family: 'paybooc-Light', 'paybooc-Medium', 'paybooc-Bold', 'paybooc-ExtraBold', 'Poppins', sans-serif; font-size: 16px; color: #000;}
+table { width: 100%; border-collapse: collapse;}
+h1 {font-size: 2.2em;} 
+h2 {font-size: 1.6em;} 
+h3 {font-size: 1em;}
+h4 {font-size: 0.89em;}
+button {border: 0; background-color: transparent; cursor: pointer;}
+
+/* 공용클래스 */
+.wrap { width: 96%; max-width: 1600px; margin: auto;}
+.clearfix::after { content: ''; display: block; clear: both;}
+.blind {position: absolute; left: -9999em; top: -9999em;}
+.center {text-align: center;}
+.table {display: table;}
+.table_cell {display: table-cell; vertical-align: middle;}
+.parent {position: relative;}
+.ltsp {letter-spacing: -1px;}
+.bd0 {border: 0 !important;}
+.btn {border: 0; background-color: transparent; cursor: pointer;}
+
+
+/* 글자 두께 관련 속성 */
+.eb {font-family: 'paybooc-ExtraBold';}
+.bd {font-family: 'paybooc-Bold';}
+.md {font-family: 'paybooc-Medium';}
+.lh {font-family: 'paybooc-Light';}
+.pp {font-family: 'Poppins';}
+
+/* 글자 관련 */
+.grey, .grey:hover, .grey a {color: #666 !important;}
+.gr, .gr:hover, .gr a {color: #609268 !important;}
+.or, .or:hover, .or a {color: #db8328 !important;}
+.bk, .bk:hover, .bk a {color: #333 !important;}
+.bk2, .bk2:hover, .bk2 a {color: #666 !important;}
+.wh, .wh:hover, .wh a {color: #fff !important;}
+.upcase {text-transform: uppercase;}
+
+/* 스킵버튼 */
+#skip>a {display: block;position: fixed; left: 0; top: -100px; width: 100%; line-height: 48px; background-color: #9aba9f; text-align: center; font-weight: bold; z-index: 9999;}
+#skip>a:focus {top: 0;}
+
+/* HEADER */
+#ev-hd {position: fixed; left: 0; top: 0; z-index: 100; width: 100%; height: 100px; background-color: #fff; border-bottom: 1px solid #ddd; z-index: 10;}
+.gr-bg {/* 녹색 서브메뉴 배경 */ position: absolute; left: 0; top: 100px; content: ''; display: block; width: 100%; height: 0; background-color: #9aba9f;}
+#ev-hd .depth1 > a {font-family: 'paybooc-Bold';}
+.ev-hd-wrap {position: relative;}
+.ev-logo {position: absolute; top: 0; padding: 30px 0; z-index: 10;} 
+.ev-logo a {display: block; width: 182px; height: 40px; background: url('../images/logo_gr.png') no-repeat; background-size: contain;}
+
+
+/* GNB */
+#ev-gnb {left: 22%; width: 55%; margin: auto; text-align: center; height: 100px; overflow: hidden;}
+.depth1 {display: inline-block;}
+.depth1:hover .depth2, .depth1:focus-within .depth2 {display: block;}
+.depth1 > a {display: block; position: relative; left: 0;  bottom: 0; padding: 0 40px; line-height: 100px; color: #609268;}
+
+.line {position: absolute; left: 0; bottom: 0; content: ''; width: 100%; height: 3px; background-color: #E47E11; transform: scaleX(0); opacity: 0; transition: 0.3s linear;}
+.line.long {opacity: 1; transform: scaleX(1);}
+
+.depth2 {display: none; position: absolute; left: 50%; top: 100px; width: 1280px; margin-left:-640px; text-align: center; }
+.depth2 li {display: inline-block;}
+.depth2 li a {position: relative; padding: 0 30px; line-height: 80px; font-size: .95em; color: #fff; }
+.depth2 li a::after {display: block; content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 3px; transform: scaleX(0);}
+
+.hd-menu {display: inline-block; position: absolute; right: 50px; top: 0;}
+.hd-menu a {width: 100%; margin: 0 20px; line-height: 100px; color: #609268;}
+.depth1:hover > a, .depth1:focus-within > a, .depth2 a:hover, .depth2 a:focus, .hd-menu a:hover, .hd-menu a:focus {color: #db8328 !important; font-family: 'paybooc-Bold'; }
+
+.side-gnb-btn {position: absolute; right:0; top: 35px; width: 25px; height: 25px; z-index: 100; cursor: pointer;}
+.side-gnb-btn span {position: absolute; left: 0; display: block; width: 100%; height: 2px; background-color: #609268;}
+.side-gnb-btn .line1 {top: 0px; transition: top 0.3s 0.3s, transform 0.3s;}
+.side-gnb-btn .line2 {top: 11px; transition: 0.3s;}
+.side-gnb-btn .line3 {top: 22px; transition: top 0.3s 0.3s, transform 0.3s;}
+
+/* 푸터 영역 */
+#ev-ft {padding: 30px 0; background-color: #2c313a; font-size: .85em;}
+.ev-ft-nav-wrap {border-bottom: 1px solid rgb(119, 119, 119,0.5)}
+.ev-ft-nav {margin-bottom: 30px; line-height: 1;}
+.ev-ft-nav ul li {float: left;}
+.ev-ft-nav ul li:after, .ft-info > dd:after {float: right; margin: 0 25px; content: ''; display: block;  width: 0.1em; height: 1.1em; background-color: #fff; opacity: 0.25;}
+.ev-ft-nav ul li:last-child:after, .ft-info > dd:last-of-type:after, .ft-info > dd:nth-of-type(2):after {display: none;} 
+.ft-nav {float: left;}
+.ft-nav li:first-child a {color:#db8328 !important;}
+.ft-info-wrap {position: relative; margin-top: 30px;}
+.ft-info {margin-top: 30px;}
+.ft-info dt, .ft-info dd {float: left; line-height: 1; margin: 0 0 .6em;}
+.ft-info dt:after {content: ':'; padding: 0 0.5em;}
+.ft-info dt:nth-of-type(4), .ft-info dt:nth-of-type(7) {clear: left;}
+.ft-info dd:nth-of-type(3):after, .ft-info dd:nth-of-type(6):after {content: none;}
+.ft_logos {position: absolute; right: 0; bottom: 45px; transform: scale(0.8);}
+.ft_logos a {margin: 0 15px;}
+
+/* 위로가기 버튼 */
+.gototop {position: fixed; right: 50px; bottom: 50px; width: 40px; height: 40px; border: 1px solid #fff; background:url('../images/icon_slide_prev_01.png') no-repeat 50%; border-radius: 100%; transform: rotate(90deg); cursor: pointer;}
+.fp-viewing-section-1 .gototop {display: none;}
+.fp-viewing-section-2 .gototop, .fp-viewing-section-3 .gototop {border: 1px solid #bbb; background:url('../images/icon_slide_prev_02.png') no-repeat 50%;}
+
+
+@media screen and (max-width: 1577px) {
+    #ev-gnb {left: 0; width: 100%;}
+}
